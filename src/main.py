@@ -1,17 +1,25 @@
 import os
 import socket
-import subprocess
 import serial.tools.list_ports
+from ping import ping
+
+
+def clear():
+    os.system("cls" if os.name == "nt" else "clear")
 
 
 def show_menu():
-    print("\nPOS Diagnostic Toolkit")
-    print("1 - List Serial Ports")
-    print("2 - Test Serial Connection")
-    print("3 - Ping Device")
-    print("4 - Test TCP Port")
-    print("5 - System Info")
-    print("0 - Exit")
+    clear()
+    print("=" * 40)
+    print("      POS DIAGNOSTIC TOOLKIT")
+    print("=" * 40)
+    print("1. List Serial Ports")
+    print("2. Test Serial Connection")
+    print("3. Ping Device")
+    print("4. Test TCP Port")
+    print("5. System Info")
+    print("0. Exit")
+    print("=" * 40)
 
 
 def list_serial():
@@ -37,19 +45,22 @@ def test_serial():
 
 def ping_device():
     ip = input("Enter IP: ")
-    subprocess.call(["ping", ip])
+    if ping(ip):
+        print("[*] Ping successful")
+
+
+def test_connection(ip, port):
+    try:
+        socket.create_connection((ip, port), timeout=3)
+        return "OPEN"
+    except:
+        return "CLOSED"
 
 
 def tcp_test():
     ip = input("IP: ")
     port = int(input("Port: "))
-
-    try:
-        s = socket.create_connection((ip, port), timeout=3)
-        print("Port OPEN")
-        s.close()
-    except:
-        print("Port CLOSED")
+    print(test_connection(ip, port))
 
 
 def system_info():
