@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="752ce84b-8b7f-4eaf-b30e-1f7232b82d8b" name="Changes" comment="Creating basic script software to help the POS technician community.">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+>>>>>>> master
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +43,11 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
     "git-widget-placeholder": "main"
+=======
+    "git-widget-placeholder": "master"
+>>>>>>> master
   }
 }]]></component>
   <component name="RunManager">
@@ -90,6 +98,7 @@
       <option name="project" value="LOCAL" />
       <updated>1773367129219</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00002" summary="Creating basic script software to help the POS technician community.">
       <option name="closed" value="true" />
       <created>1773368214841</created>
@@ -99,6 +108,9 @@
       <updated>1773368214841</updated>
     </task>
     <option name="localTasksCounter" value="3" />
+=======
+    <option name="localTasksCounter" value="2" />
+>>>>>>> master
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
